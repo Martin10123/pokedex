@@ -1,4 +1,10 @@
 {
+  "routes": [
+    {
+      "route": "/pokedex-angular/assets/*",
+      "rewrite": "/assets/{wildcard}"
+    }
+  ],
   "globalHeaders": {
     "Content-Security-Policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; frame-ancestors 'none'; connect-src 'self' https://beta.pokeapi.co https://pokeapi.co https://*.pokeapi.co",
     "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
@@ -9,6 +15,6 @@
   },
   "navigationFallback": {
     "rewrite": "/index.html",
-    "exclude": ["/assets/*", "/*.css", "/*.js"]
+    "exclude": ["/assets/*", "/*.css", "/*.js", "/*.png", "/*.gif", "/*.jpg"]
   }
 }
